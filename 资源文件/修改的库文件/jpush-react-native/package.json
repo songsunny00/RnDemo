@@ -1,0 +1,88 @@
+{
+  "name": "jpush-react-native",
+  "version": "2.2.5",
+  "description": "a jpush plugin for react native application",
+  "main": "index.js",
+  "scripts": {
+    "precommit": "lint-staged",
+    "lint": "prettier --write '**/*.{js,ts,md}'; standard --fix"
+  },
+  "types": "index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jpush/jpush-react-native.git"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "jpush"
+  ],
+  "author": "KenChoi, huminiOS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jpush/jpush-react-native/issues"
+  },
+  "homepage": "https://github.com/jpush/jpush-react-native#readme",
+  "peerDependencies": {
+    "jcore-react-native": ">= 1.2.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.0.1",
+    "prettier": "^1.10.2",
+    "standard": "^10.0.3"
+  },
+  "lint-staged": {
+    "*.{ts,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.js": [
+      "prettier --write",
+      "standard --fix",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "standard": {
+    "env": {
+      "jest": true
+    },
+    "parser": "babel-eslint",
+    "ignore": [
+      "android/",
+      "ios/"
+    ]
+  },
+  "rnpm": {
+    "android": {
+      "packageInstance": "new JPushPackage(!BuildConfig.DEBUG, !BuildConfig.DEBUG)"
+    },
+    "ios": {
+      "sharedLibraries": [
+        "libz",
+        "UserNotifications",
+        "CoreTelephony",
+        "Security",
+        "CFNetwork",
+        "CoreFoundation",
+        "SystemConfiguration",
+        "Foundation",
+        "UIKit",
+        "libresolv",
+        "CoreGraphics"
+      ]
+    },
+    "commands": {
+      "prelink": "node node_modules/jpush-react-native/scripts/patch"
+    }
+  },
+  "dependencies": {
+    "inquirer": "*",
+    "mpatch": "^0.1.0"
+  }
+}
