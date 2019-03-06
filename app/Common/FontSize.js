@@ -1,6 +1,12 @@
-/**
- * Created by Rabbit on 2017/4/20.
+/*
+ * @Author: songsunny
+ * @LastEditors: songsunny
+ * @Description: 处理安卓，iOS字体不同的类
+ * @Github: https://github.com/songsunny00
+ * @Date: 2019-02-11 13:35:47
+ * @LastEditTime: 2019-02-25 14:18:41
  */
+
 const FontSize = (size) => {
     if (PixelRatio === 2) {
         // iphone 5s and older Androids

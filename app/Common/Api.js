@@ -1,27 +1,33 @@
 const Api = {
     getLocationDetail: (latlon) => {
-        return new Promise((resolve, reject) => {
-            RTRequest.post('http://sls.4006005656.com/wechat/getLocationDetail', latlon)
-                .then((res) => {
-                    if (res.data) resolve(res.data);
-                    else reject()
-                })
-                .catch((error) => {
-                    reject(error);
-                });
+        return RTRequest({
+            url: 'http://sls.4006005656.com/wechat/getLocationDetail',
+            method: 'post',
+            data: latlon,
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+            }
         })
     },
     login: (param, spdUrl) => {
-        return new Promise((resolve, reject) => {
-            RTRequest.post(spdUrl + 'app/user/storeLogin', param)
-                .then((res) => {
-                    if (res.data) resolve(res.data);
-                    else reject()
-                })
-                .catch((error) => {
-                    reject(error);
-                });
+        return RTRequest({
+            url: spdUrl + 'app/user/storeLogin',
+            method: 'post',
+            data: param,
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+            }
         })
+        // return new Promise((resolve, reject) => {
+        //     RTRequest.post(spdUrl + 'app/user/storeLogin', param)
+        //         .then((res) => {
+        //             if (res.data) resolve(res.data);
+        //             else reject()
+        //         })
+        //         .catch((error) => {
+        //             reject(error);
+        //         });
+        // })
     },
     getList: (param, spdUrl) => {
         return new Promise((resolve, reject) => {

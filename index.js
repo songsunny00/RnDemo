@@ -1,5 +1,5 @@
 import { AppRegistry } from 'react-native';
-import './app/Common/SetTheme'
+//import './app/Common/SetTheme'
 import './app/Common/Global'
 
 import App from './App';

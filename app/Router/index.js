@@ -1,9 +1,10 @@
 /*
- * @Author: badx.龙腾归海 
- * @Date: 2018-06-26 14:42:34 
- * @Last Modified by: badx.龙腾归海
- * @Last Modified time: 2018-08-07 21:54:19
- * @Description: 路由配置文件 
+ * @Author: songsunny
+ * @Date: 2019-02-11 13:35:47
+ * @LastEditors: songsunny
+ * @LastEditTime: 2019-02-26 13:49:29
+ * @Description: 路由配置文件（技术栈：react-native-router-flux）
+ * @Github: https://github.com/songsunny00
  */
 
 import React from 'react';
@@ -26,46 +27,46 @@ import {
 import { Theme } from 'teaset';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-import TabIcon from './Component/TabIcon';
-import Loading from './Component/Loading';
+import TabIcon from '../Component/TabIcon';
+import Loading from '../Component/Loading';
 
-import Login from './Pages/Login/Login';
-import BaiduMap from './Pages/Login/baiduMap';
-import Jpush from './Pages/Login/Jpush';
-import BackTask from './Pages/Login/BackTask';
-import CheckPermission from './Pages/Login/CheckPermission';
-import SysConfig from './Pages/Login/SysConfig';
-import ForgetPwd from './Pages/Login/ForgetPwd';
-import RegAccount from './Pages/Register/Account';
-import Protocol from './Pages/Register/Protocol';
-import PersonalInfo from './Pages/Register/PersonalInfo';
-import TruckInfo from './Pages/Register/TruckInfo';
-import PicInfo from './Pages/Register/PicInfo';
-import ResultInfo from './Pages/Register/ResultInfo';
-import CityPicker from './Pages/Register/CityPicker';
-import Work from './Pages/Main/Work';
-import Menu from './Pages/Main/Menu';
-import Task from './Pages/Main/Task';
-import Map from './Pages/Main/Map';
-import Search from './Pages/Main/Search';
-import QRScan from './Pages/Main/QRScan';
-import Profile from './Pages/Main/Silder/Profile';
-import MyQR from './Pages/Main/Silder/MyQR';
-import ShowPersonalInfo from './Pages/Main/Silder/ShowPersonalInfo';
-import ShowTruckInfo from './Pages/Main/Silder/ShowTruckInfo';
-import ShowPicInfo from './Pages/Main/Silder/ShowPicInfo';
-import ModifyPwd from './Pages/Main/Silder/ModifyPwd';
-import Card from './Pages/Main/Silder/Card';
-import Income from './Pages/Main/Silder/Income';
-import Setting from './Pages/Main/Silder/Setting';
-import Help from './Pages/Main/Silder/Help';
-import About from './Pages/Main/Silder/About';
-import HistoryTask from './Pages/Main/Silder/HistoryTask';
-import Feedback from './Pages/Main/Silder/Feedback';
-import OrderDetail from './Pages/Main/OrderDetail';
-import Receipt from './Pages/Main/Receipt';
-import ReceiptPic from './Pages/Main/ReceiptPic';
-import Home from './Pages/Main/Home';
+import Login from '../Pages/Login/Login';
+import BaiduMap from '../Pages/Login/baiduMap';
+import Jpush from '../Pages/Login/Jpush';
+import BackTask from '../Pages/Login/BackTask';
+import CheckPermission from '../Pages/Login/CheckPermission';
+import SysConfig from '../Pages/Login/SysConfig';
+import ForgetPwd from '../Pages/Login/ForgetPwd';
+import RegAccount from '../Pages/Register/Account';
+import Protocol from '../Pages/Register/Protocol';
+import PersonalInfo from '../Pages/Register/PersonalInfo';
+import TruckInfo from '../Pages/Register/TruckInfo';
+import PicInfo from '../Pages/Register/PicInfo';
+import ResultInfo from '../Pages/Register/ResultInfo';
+import CityPicker from '../Pages/Register/CityPicker';
+import Work from '../Pages/Main/Work';
+import Menu from '../Pages/Main/Menu';
+import Task from '../Pages/Main/Task';
+import Map from '../Pages/Main/Map';
+import Search from '../Pages/Main/Search';
+import QRScan from '../Pages/Main/QRScan';
+import Profile from '../Pages/Main/Silder/Profile';
+import MyQR from '../Pages/Main/Silder/MyQR';
+import ShowPersonalInfo from '../Pages/Main/Silder/ShowPersonalInfo';
+import ShowTruckInfo from '../Pages/Main/Silder/ShowTruckInfo';
+import ShowPicInfo from '../Pages/Main/Silder/ShowPicInfo';
+import ModifyPwd from '../Pages/Main/Silder/ModifyPwd';
+import Card from '../Pages/Main/Silder/Card';
+import Income from '../Pages/Main/Silder/Income';
+import Setting from '../Pages/Main/Silder/Setting';
+import Help from '../Pages/Main/Silder/Help';
+import About from '../Pages/Main/Silder/About';
+import HistoryTask from '../Pages/Main/Silder/HistoryTask';
+import Feedback from '../Pages/Main/Silder/Feedback';
+import OrderDetail from '../Pages/Main/OrderDetail';
+import Receipt from '../Pages/Main/Receipt';
+import ReceiptPic from '../Pages/Main/ReceiptPic';
+import Home from '../Pages/Main/Home';
 
 const reducerCreate = params => {
     const defaultReducer = new Reducer(params);

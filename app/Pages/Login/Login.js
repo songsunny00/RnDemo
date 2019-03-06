@@ -1,9 +1,10 @@
 /*
- * @Author: badx.龙腾归海 
- * @Date: 2018-06-26 16:00:32 
- * @Last Modified by: badx.龙腾归海
- * @Last Modified time: 2018-08-08 11:22:17
- * @Description: 登录主页 
+ * @Author: songsunny
+ * @LastEditors: songsunny
+ * @Description: 登录主页
+ * @Github: https://github.com/songsunny00
+ * @Date: 2019-02-11 13:35:47
+ * @LastEditTime: 2019-03-06 14:45:06
  */
 
 
@@ -25,13 +26,14 @@ import { observer, inject } from 'mobx-react/native';
 import LoginInput from '../../Component/LoginInput';
 
 const sysClickNum = 0
-@inject(["userStore"], ['locationStore']) // 注入对应的store
+@inject(["userStore"], ['locationStore'], ['comStore']) // 注入对应的store
 @observer
 export default class Login extends Component {
     constructor(props) {
         super(props);
         this.store = this.props.userStore; //通过props来导入访问已注入的store
         this.location = this.props.locationStore;
+        this.common = this.props.comStore;
         this.state = {
             btnDisabled: true,
         };
@@ -40,7 +42,8 @@ export default class Login extends Component {
 
     componentDidMount() {
         SplashScreen.hide();
-        this.location.getPermisions();
+        this.common.getPermisions();
+        this.location.getCurrentPosition()
     }
 
     onBeforeStart = async () => {
@@ -228,7 +231,7 @@ const styles = StyleSheet.create({
         marginTop: px2dp(100),
         width: SCREEN_WIDTH - px2dp(120),
         backgroundColor: Color.primary,
-        borderColor: Theme.transparentColor,
+        borderColor: Color.primary,
         borderRadius: 20
 
     },

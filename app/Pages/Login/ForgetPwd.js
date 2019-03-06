@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
         marginTop: px2dp(40),
         marginBottom: px2dp(20),
         backgroundColor: Color.primary,
-        borderColor: Theme.transparentColor,
+        borderColor: Color.primary,
         borderRadius: 20,
         alignSelf: "center"
     },

@@ -2,10 +2,11 @@
  * @Author: songsunny
  * @Date: 2019-02-11 13:35:36
  * @LastEditors: songsunny
- * @LastEditTime: 2019-02-24 12:41:12
+ * @LastEditTime: 2019-02-24 13:01:01
  * @Description: 入口文件
  * @Github: https://github.com/songsunny00
  */
+//ctrl+alt+i 生城头部信息快捷键
 
 import React, { Component } from 'react';
 import {
