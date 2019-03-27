@@ -4,7 +4,7 @@
  * @Description: 登录主页
  * @Github: https://github.com/songsunny00
  * @Date: 2019-02-11 13:35:47
- * @LastEditTime: 2019-03-06 14:45:06
+ * @LastEditTime: 2019-03-27 19:38:22
  */
 
 
@@ -90,7 +90,7 @@ export default class Login extends Component {
                 <View style={{ flex: 1, alignItems: 'center' }}>
                     <View style={styles.loginViewStyle}>
                         <LoginInput
-                            placeholder='请输入用户名'
+                            placeholder='请输入用名'
                             onChangeText={(text) => {
                                 this.store.phone = text;
                                 if (this.store.passWord && text) {
